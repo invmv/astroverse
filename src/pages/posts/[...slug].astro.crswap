@@ -24,7 +24,7 @@ const { Content } = await post.render();
           <h1>{post.data.title}</h1>
         </div>
         <div class="flex justify-between">
-          <small  class="text-gray-500 text-sm font-medium">
+          <small  class="text-gray-500 text-sm font-medium">⏰
           <FormattedDate date={post.data.pubDate} />
           </small>
           <div class="prose-a:no-underline">
