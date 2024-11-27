@@ -29,9 +29,9 @@ export function getCategoryMetadata(category: string) {
 
 // Header Links, src/components/Header.astro
 export const HeaderLinks = [
-  { href: "/category/review/", title: "ReView" },
-  { href: "/category/mytrade", title: "MyTrade" },
-  { href: "/category/other/", title: "Other" },
+  { href: "/category/review/1", title: "ReView" },
+  { href: "/category/mytrade/1", title: "MyTrade" },
+  { href: "/category/other/1", title: "Other" },
   { href: "/tags/", title: "All Tags" },
 ];
 

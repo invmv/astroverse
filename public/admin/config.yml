@@ -36,7 +36,7 @@ collections:
         name: "tags"
         widget: "list"
         allow_add: true
-        hint: "添加文章相关标签"
+        hint: "标签使用英文逗号+空格隔开，如标签1, 标签2, 标签3"
       
       - name: "body"
         label: "正文"
