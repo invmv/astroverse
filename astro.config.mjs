@@ -24,11 +24,11 @@ export default defineConfig({
     remotePatterns: [
       {
         protocol: "https",     // 允许 HTTPS 协议
-        hostname: "**",        // 允许所有主机名
+        hostname: "*",        // 允许所有主机名
       },
       {
         protocol: "http",      // 允许 HTTP 协议（如果你希望允许 HTTP）
-        hostname: "**",        // 允许所有主机名
+        hostname: "*",        // 允许所有主机名
       },
     ],
   },
