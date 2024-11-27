@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: invmv/astroverse
+  branch: main # Branch to update (optional; defaults to master)
+  base_url: https://invmy.us.kg
+  auth_endpoint: /api/auth
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: "Home"
+    label: "Home"
+    folder: "src/content/posts"
+    slug: "{{slug}}"  # 自动生成的文件名格式
+    create: true
+    fields:
+      - { 
+          label: "Slug", 
+          name: "slug", 
+          widget: "string", 
+          required: false, 
+          hint: "由标题自动生成",
+          pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "仅限小写字母、数字和连字符"], 
+          default: "{{title | slugify}}", 
+          hidden: true 
+        }
+      - { label: "封面图片", name: "cover", widget: "image" }
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text" }
+      - { label: "标签", name: "tags", widget: "list" }
+      - { label: "分类", name: "category", widget: "string" }
+      - { label: "发布日期", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      - { name: "body", label: "正文", widget: "markdown",modes: ["raw","rich_text"] }
+    meta:  # 配置后台列表显示格式
+      - label: "生成时间 + 标题"
+        name: "combined"
+        value: "{{pubDate}} - {{title}}"
