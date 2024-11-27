@@ -41,7 +41,7 @@ const { Content } = await post.render();
         <div>
           {
             post.data.cover && (
-              <OptimizedCover src={post.data.cover} alt={post.data.coverAlt} inferSize={true}/>
+              <OptimizedCover src={post.data.cover} alt={post.data.coverAlt} />
             )
           }
         </div>
