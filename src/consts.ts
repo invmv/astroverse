@@ -6,7 +6,6 @@ export const BRAND_NAME = "invmy";
 export const SITE_TITLE = "invmy";
 export const SITE_DESCRIPTION = "invest my trade";
 
-export const disqus_shortname = "invmy";
 // Tags Page Metadata, src/pages/tags/index.astro
 export const Tags_TITLE = "invmy - All Tags";
 export const Tags_DESCRIPTION =
