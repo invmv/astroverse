@@ -14,7 +14,9 @@ collections:
     summary: "{{pubDate}} - {{title}}"
     create: true
     fields:
+      - { label: "author", name: "author", widget: "string", default: "invmy", hidden: true }
       - { label: "封面图片", name: "cover", widget: "image" }
+      - { label: "封面描述", name: "coverAlt", widget: "string"}
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "text" }
       - { label: "发布日期", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
@@ -22,7 +24,8 @@ collections:
       # 分类字段，用户可以从预定义分类中选择
       - label: "分类"
         name: "category"
-        widget: "select"
+        widget: "list"
+        allow_add: false
         options:
           - label: "review"
             value: "review"
