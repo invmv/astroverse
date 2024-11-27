@@ -10,24 +10,32 @@ collections:
   - name: "Home"
     label: "Home"
     folder: "src/content/posts"
-    slug: "{{slug}}"  # 自动生成的文件名格式
+    slug: "{{title | slugify}}"  # 自动生成的文件名格式
     summary: "{{pubDate}} - {{title}}"
     create: true
     fields:
-      - { 
-          label: "Slug", 
-          name: "slug", 
-          widget: "string", 
-          required: false, 
-          hint: "由标题自动生成",
-          pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "仅限小写字母、数字和连字符"], 
-          default: "{{title | slugify}}", 
-          hidden: true 
-        }
       - { label: "封面图片", name: "cover", widget: "image" }
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "text" }
-      - { label: "标签", name: "tags", widget: "list" }
-      - { label: "分类", name: "category", widget: "string" }
       - { label: "发布日期", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      # 分类字段，用户可以从预定义分类中选择
+      - { 
+          label: "分类", 
+          name: "category", 
+          widget: "select", 
+          options: 
+            - { label: "review", value: "review" }
+            - { label: "mytrade", value: "mytrade" }
+            - { label: "other", value: "other" },
+          hint: "选择分类"
+        }
+      # 标签字段，用户可以自由添加多个标签
+      - { 
+          label: "标签", 
+          name: "tags", 
+          widget: "list", 
+          allow_add: true, 
+          hint: "添加文章相关标签" 
+        }
+
       - { name: "body", label: "正文", widget: "markdown",modes: ["raw","rich_text"] }

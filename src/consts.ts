@@ -29,16 +29,16 @@ export function getCategoryMetadata(category: string) {
 
 // Header Links, src/components/Header.astro
 export const HeaderLinks = [
-  { href: "/category/One/1/", title: "One" },
-  { href: "/category/Two/1/", title: "Two" },
-  { href: "/category/Three/1/", title: "Three" },
+  { href: "/category/review/", title: "ReView" },
+  { href: "/category/mytrade", title: "MyTrade" },
+  { href: "/category/other/", title: "Other" },
+  { href: "/tags/", title: "All Tags" },
 ];
 
 // Footer Links, src/components/Footer.astro
 export const FooterLinks = [
   { href: "/posts/why-astro/", title: "Astro" },
   { href: "/posts/tailwind-typography/", title: "Tailwind" },
-  { href: "/tags/", title: "Tags" },
 ];
 
 // Social Links, src/components/Footer.astro
