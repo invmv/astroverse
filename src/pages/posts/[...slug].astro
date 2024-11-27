@@ -52,7 +52,7 @@ const { Content } = await post.render();
           <Content />
         </div>
 
-    <Comment identifier={identifier} url={url} title={title} />
+    <Disqus identifier={post.id} url={post.url} title={post.data.title} />
 
     </article>
 

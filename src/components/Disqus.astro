@@ -8,8 +8,10 @@ interface Props {
   title: string;
 }
 
-// 从 Astro.props 获取页面参数
-const { identifier, url, title } = Astro.props;
+// 模拟获取 identifier、url、title 示例数据，如果实际调用是从 post 传递，需在调用处传参
+const identifier = Astro.props?.id || 'default-identifier'; // 替换为实际逻辑
+const url = `${Astro.site?.href}/posts/${Astro.props?.slug || 'default-slug'}`;
+const title = Astro.props?.title || 'Default Title';
 
 // 检查是否配置了 Disqus
 if (!disqus_shortname) {
