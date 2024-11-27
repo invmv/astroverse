@@ -18,26 +18,27 @@ collections:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "text" }
       - { label: "发布日期", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      
       # 分类字段，用户可以从预定义分类中选择
-      - { 
-          label: "分类", 
-          name: "category", 
-          widget: "select", 
-          options:
-            - label: "review"
-              value: "review"
-            - label: "mytrade"
-              value: "mytrade"
-            - label: "other"
-              value: "other"
-        }
+      - label: "分类"
+        name: "category"
+        widget: "select"
+        options:
+          - label: "review"
+            value: "review"
+          - label: "mytrade"
+            value: "mytrade"
+          - label: "other"
+            value: "other"
+      
       # 标签字段，用户可以自由添加多个标签
-      - { 
-          label: "标签", 
-          name: "tags", 
-          widget: "list", 
-          allow_add: true, 
-          hint: "添加文章相关标签" 
-        }
-
-      - { name: "body", label: "正文", widget: "markdown",modes: ["raw","rich_text"] }
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        hint: "添加文章相关标签"
+      
+      - name: "body"
+        label: "正文"
+        widget: "markdown"
+        modes: ["raw", "rich_text"]
