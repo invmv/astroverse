@@ -19,8 +19,8 @@ const {
            (max-width: 720px) 700px, 
            (max-width: 1600px) 980px, 
            1960px`,
-  formats = ["avif"],
-  fallbackFormat = "avif",
+  formats = ["avif", "webp", "jpeg", "png"], // 支持 webp 和 avif 格式
+  fallbackFormat = "avif",    // 设置 webp 为 fallback 格式
   class: className = "mx-auto w-full max-w-full rounded-lg"
 } = Astro.props;
 ---
