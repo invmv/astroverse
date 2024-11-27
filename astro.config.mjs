@@ -21,8 +21,10 @@ export default defineConfig({
   },
 
   image: {
-    // 示例：允许来自单个域名的远程图像优化。
-    domains: ['invmy.us.kg'],
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: '**.invmy.us.kg/**',
+    }],
   },
 
   markdown: {
