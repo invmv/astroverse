@@ -32,6 +32,9 @@ importers:
       astro:
         specifier: ^4.16.12
         version: 4.16.12(@types/node@22.0.2)(rollup@4.21.2)(typescript@5.5.4)
+      astro-disqus:
+        specifier: ^1.0.1
+        version: 1.0.1
       astro-icon:
         specifier: ^1.1.0
         version: 1.1.0
@@ -877,6 +880,9 @@ packages:
   astring@1.8.6:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
+
+  astro-disqus@1.0.1:
+    resolution: {integrity: sha512-x0VAc/f8zzt09RBef4ffmqaVBEL8tS1qZBUPvuFygGkrlkz/QV1tld0oLSl+/SwgNOYOMfuXJerKiMLC1+n3WQ==}
 
   astro-icon@1.1.0:
     resolution: {integrity: sha512-Nksc09p7UuHeMcPNS9w1pKqRw3+wEmmh0A3FJW+FNXvqaeWI4RLvD1MCWErpY3Z5Cvad317rvLdik/Hg8GEk8Q==}
@@ -3651,6 +3657,8 @@ snapshots:
   array-iterate@2.0.1: {}
 
   astring@1.8.6: {}
+
+  astro-disqus@1.0.1: {}
 
   astro-icon@1.1.0:
     dependencies:
