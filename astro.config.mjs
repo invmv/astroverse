@@ -23,7 +23,7 @@ export default defineConfig({
   image: {
     remotePatterns: [{
       protocol: 'https',
-      hostname: '**.invmy.us.kg/**',
+      hostname: '**.jsdelivr.net/**',
     }],
   },
 
