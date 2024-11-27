@@ -1,18 +1,5 @@
 ---
 import { disqus_shortname } from "@consts";
-interface Props {
-  identifier: string
-  url: string
-  title: string
-}
-
-const { identifier, url, title } = Astro.props
-const { comment } = themeConfig
-
-if (!comment || !comment.disqus) {
-  throw new Error('Disqus comments are not configured')
-}
-const shortname = disqus_shortname
 ---
 
 <div id="disqus_thread"></div>
@@ -26,7 +13,7 @@ const shortname = disqus_shortname
   ;(function () {
     const d = document
     const s = d.createElement('script')
-    s.src = `https://${shortname}.disqus.com/embed.js`
+    s.src = `https://${disqus_shortname}.disqus.com/embed.js`
     s.setAttribute('data-timestamp', new Date().toString())
     ;(d.head || d.body).appendChild(s)
   })()

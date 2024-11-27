@@ -5,7 +5,7 @@ import RelatedPostsCard from "@components/RelatedPostsCard.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import OptimizedCover from "@components/OptimizedPicture.astro";
 
-import Comment from '~/components/Disqus.astro';
+import Comment from '@components/Disqus.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -51,7 +51,7 @@ const { Content } = await post.render();
         <div>
           <Content />
         </div>
-        
+
     <Comment />
 
     </article>
