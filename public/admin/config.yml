@@ -4,8 +4,8 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
   base_url: https://invmy.us.kg
   auth_endpoint: /api/auth
-media_folder: public/uploads
-public_folder: /uploads
+media_folder: public
+public_folder: /
 collections:
   - name: "Home"
     label: "Home"
