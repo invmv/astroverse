@@ -23,11 +23,13 @@ collections:
           label: "分类", 
           name: "category", 
           widget: "select", 
-          options: 
-            - { label: "review", value: "review" }
-            - { label: "mytrade", value: "mytrade" }
-            - { label: "other", value: "other" },
-          hint: "选择分类"
+          options:
+            - label: "review"
+              value: "review"
+            - label: "mytrade"
+              value: "mytrade"
+            - label: "other"
+              value: "other"
         }
       # 标签字段，用户可以自由添加多个标签
       - { 
