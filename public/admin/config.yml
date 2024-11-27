@@ -4,8 +4,8 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
   base_url: https://invmy.us.kg
   auth_endpoint: /api/auth
-media_folder: src/assets/images
-public_folder: src/assets/images
+media_folder: pubilc/uploads
+public_folder: uploads
 collections:
   - name: "Home"
     label: "Home"
@@ -15,7 +15,7 @@ collections:
     create: true
     fields:
       - { label: "author", name: "author", widget: "string", default: "invmy", hidden: true }
-      - { label: "封面图片", name: "cover", widget: "image" }
+      - { label: "封面图片", name: "cover", widget: "image", hint: "只允许使用URL插入，不允许上传"}
       - { label: "封面描述", name: "coverAlt", widget: "string"}
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "text" }

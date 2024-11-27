@@ -4,10 +4,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import RelatedPostsCard from "@components/RelatedPostsCard.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import OptimizedCover from "@components/OptimizedPicture.astro";
-
-
 import { Disqus } from "astro-disqus";
-
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -19,6 +16,7 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await post.render();
+
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description}>
