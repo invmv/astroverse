@@ -2,8 +2,8 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 // Base Page Metadata, src/layouts/BaseLayout.astro
-export const BRAND_NAME = "invmy";
-export const SITE_TITLE = "invmy";
+export const BRAND_NAME = "invmy Daytrading";
+export const SITE_TITLE = "invmy Daytrading";
 export const SITE_DESCRIPTION = "invest my trade";
 
 // Tags Page Metadata, src/pages/tags/index.astro
