@@ -48,6 +48,7 @@ const { Content } = await post.render();
         <div>
           <Content />
         </div>
+    </article>
     <div id="disqus_thread"></div>
     <script>
         /**
@@ -66,8 +67,6 @@ const { Content } = await post.render();
         (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </article>
     <div class="mt-4">
       <RelatedPostsCard
         currentCategory={post.data.category[0]}
