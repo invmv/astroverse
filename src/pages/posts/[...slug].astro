@@ -5,7 +5,8 @@ import RelatedPostsCard from "@components/RelatedPostsCard.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import OptimizedCover from "@components/OptimizedPicture.astro";
 
-import Comment from '@components/Disqus.astro';
+// Disqus
+import Disqus from '@components/Disqus.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -17,6 +18,9 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+// 动态构建 URL
+const url = `${Astro.site?.href}/posts/${post.slug}`;
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description}>
@@ -52,7 +56,7 @@ const { Content } = await post.render();
           <Content />
         </div>
 
-    <Disqus identifier={post.id} url={post.url} title={post.data.title} />
+    <Disqus identifier={post.id} slug={post.slug} title={post.data.title} />
 
     </article>
 
