@@ -20,12 +20,12 @@ export default defineConfig({
     contentCollectionCache: true,
   },
 
-  // image: {
-  //   remotePatterns: [{
-  //     protocol: 'https',
-  //     hostname: '**.invmy.us.kg/**',
-  //   }],
-  // },
+  image: {
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: '**.invmy.us.kg/**',
+    }],
+  },
 
   markdown: {
     remarkPlugins: [remarkModifiedTime],
